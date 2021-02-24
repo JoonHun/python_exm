@@ -16,7 +16,7 @@ os.system("git status")
 os.system("git add .")
 
 arg = "git commit -m \"" + commitLog + "\""
-print(os.system(arg))
+os.system(arg)
 
 os.system("git branch -M main")
 os.system("git push -u origin main")
