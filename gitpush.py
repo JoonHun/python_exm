@@ -6,16 +6,17 @@ try:
   print(commitLog)
 except:
   print("input commit text")
-  os.exit()
+  sys.exit()
+
+input = input("Commit log : \"" + commitLog + "\"  Right? (y/n) ")
+if( input != 'y' ):
+  sys.exit()
 
 os.system("git status")
-input("Move next step")
 os.system("git add .")
-input("Move next step")
+
 arg = "git commit -m \"" + commitLog + "\""
-#print(arg)
-os.system(arg)
-input("Move next step")
+print(os.system(arg))
+
 os.system("git branch -M main")
-input("Move next step")
 os.system("git push -u origin main")
